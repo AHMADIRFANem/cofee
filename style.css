@@ -1,0 +1,265 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f0e6;
+  color: #222;
+}
+
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('background1.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 8%;
+  transition: 0.3s;
+}
+
+.logo {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.hero-content {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 60px;
+  font-family: 'Playfair Display', serif;
+}
+
+.hero-content p {
+  margin: 20px 0;
+  font-size: 20px;
+}
+
+.hero-btn {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #4e342e;
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #8d6e63;
+}
+
+.secondary {
+  background: transparent;
+  border: 2px solid white;
+}
+
+section {
+  padding: 80px 8%;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+.about img,
+.card img,
+.gallery-grid img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title h2 {
+  font-size: 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+.product-grid,
+.why-grid,
+.market-grid,
+.testimonial-grid,
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.card,
+.why-card,
+.market-card,
+.testimonial-card {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: 0.3s;
+}
+
+.card:hover,
+.why-card:hover,
+.market-card:hover,
+.testimonial-card:hover {
+  transform: translateY(-10px);
+}
+
+.card h3,
+.testimonial-card h4 {
+  margin: 15px 0;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  width: 100%;
+}
+
+.contact textarea {
+  height: 150px;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 30px;
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-content h1,
+.hero-content p,
+.hero-btn {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease;
+}
+
+.hero-content h1.hidden-hero,
+.hero-content p.hidden-hero,
+.hero-btn.hidden-hero {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+.hero-content h1.active,
+.hero-content p.active,
+.hero-btn.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-grid img {
+  transition: transform 0.4s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+@media(max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 5%;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 38px;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+    padding: 0 15px;
+  }
+
+  .hero-btn {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  section {
+    padding: 60px 5%;
+  }
+}
+```
